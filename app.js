@@ -19,6 +19,8 @@ app.use(express.static(path.join(__dirname, 'piublic')));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extented: false}));
+app.use(express.static('public'));
+
 
 app.get('/', function(req, res){
     res.render('index');
